@@ -1,0 +1,160 @@
+{
+  //Vscode Config
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontSize": 15,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.semanticHighlighting.enabled": false,
+  "editor.minimap.enabled": false,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.cursorStyle": "block",
+  "editor.accessibilitySupport": "off",
+
+  "extensions.autoUpdate": true,
+  "extensions.ignoreRecommendations": true,
+
+  "symbols.hidesExplorerArrows": false,
+  "window.commandCenter": false,
+  "window.density.editorTabHeight": "compact",
+
+  //
+
+  //Visual Config
+  "workbench.iconTheme": "symbols",
+  "workbench.editor.labelFormat": "short",
+  "workbench.activityBar.location": "hidden",
+  "workbench.layoutControl.enabled": false,
+  "workbench.colorTheme": "Tokyo Night",
+  "window.titleBarStyle": "custom",
+
+  //Css  "https://marketplace.visualstudio.com/items?itemName=drcika.apc-extension"
+  "apc.font.family": "JetBrainsMono Nerd Font",
+  "apc.listRow": { "height": 24 },
+  "apc.stylesheet": {
+    ".pane-body": "padding: 8px, ",
+    ".title-label > h2": "display: none",
+    ".editor-actions": "display: none"
+  },
+  //
+
+  //Git
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  //
+
+  "terminal.sourceControlRepositoriesKind": "both",
+  "telemetry.telemetryLevel": "off",
+
+  "explorer.confirmDelete": false,
+
+  "explorer.compactFolders": false,
+
+  "breadcrumbs.enabled": false,
+
+  "emmet.preferences": {},
+
+  //CodeRunner  "https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner"
+  "code-runner.executorMap": {
+    "javascript": "node",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "zig": "zig run",
+    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "php": "php",
+    "python": "python -u",
+    "perl": "perl",
+    "perl6": "perl6",
+    "ruby": "ruby",
+    "go": "go run",
+    "lua": "lua54",
+    "groovy": "groovy",
+    "powershell": "powershell -ExecutionPolicy ByPass -File",
+    "bat": "cmd /c",
+    "shellscript": "bash",
+    "fsharp": "fsi",
+    "csharp": "scriptcs",
+    "vbscript": "cscript //Nologo",
+    "typescript": "ts-node",
+    "coffeescript": "coffee",
+    "scala": "scala",
+    "swift": "swift",
+    "julia": "julia",
+    "crystal": "crystal",
+    "ocaml": "ocaml",
+    "r": "Rscript",
+    "applescript": "osascript",
+    "clojure": "lein exec",
+    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+    "racket": "racket",
+    "scheme": "csi -script",
+    "ahk": "ahk2",
+    "autoit": "autoit3",
+    "dart": "dart",
+    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    "haskell": "runghc",
+    "nim": "nim compile --verbosity:0 --hints:off --run",
+    "lisp": "sbcl --script",
+    "kit": "kitc --run",
+    "v": "v run",
+    "sass": "sass --style expanded",
+    "scss": "scss --style expanded",
+    "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+    "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "sml": "cd $dir && sml $fileName",
+    "mojo": "mojo run"
+  },
+  //
+
+  //Discord Status  "https://marketplace.visualstudio.com/items?itemName=LeonardSSH.vscord"
+  "vscord.status.idle.resetElapsedTime": true,
+  "vscord.status.details.text.idle": "In Clouds☁️",
+  "vscord.status.details.text.viewing": "Coding {problems}",
+  "vscord.status.state.text.editing": "Coding in {file_extension}",
+  "vscord.status.details.text.editing": "In {directory_name}",
+  "vscord.status.image.large.editing.text": "Let's All Love Lain!",
+  "vscord.status.problems.enabled": false,
+  "vscord.status.details.text.notInFile": "👾",
+  "vscord.status.image.large.idle.key": "https://i.imgur.com/ZPtPl7J.gif",
+  "vscord.status.image.small.idle.key": "https://i.imgur.com/Of2YEyI.gif",
+  "vscord.status.image.large.idle.text": "Let's All Love Lain!",
+  "vscord.status.image.small.idle.text": "Love Lain!",
+  "vscord.status.image.large.editing.key": "https://i.imgur.com/UEEru9R.gif",
+  "vscord.status.image.large.notInFile.key": "https://i.imgur.com/F1gOfuV.gif",
+  "vscord.status.image.large.viewing.text": "Viewing a {lang} file",
+  "vscord.status.image.large.notInFile.text": "Let's All Love Lain!",
+  "vscord.status.buttons.button1.enabled": false,
+  "vscord.status.buttons.button1.git.active.enabled": false,
+  "vscord.status.buttons.button1.git.idle.enabled": false,
+  "vscord.status.image.small.editing.text": "Love Lain!",
+  //
+
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Arch (WSL)": {
+      "path": "C:\\WINDOWS\\System32\\wsl.exe",
+      "args": ["-d", "Arch"]
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "Arch (WSL)"
+}
