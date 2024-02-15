@@ -10,6 +10,8 @@
   "editor.scrollbar.vertical": "hidden",
   "editor.cursorStyle": "block",
   "editor.accessibilitySupport": "off",
+  "editor.acceptSuggestionOnEnter": "smart",
+  "settingsSync.keybindingsPerPlatform": false,
 
   "extensions.autoUpdate": true,
   "extensions.ignoreRecommendations": true,
@@ -25,7 +27,6 @@
   "workbench.editor.labelFormat": "short",
   "workbench.activityBar.location": "hidden",
   "workbench.layoutControl.enabled": false,
-  "workbench.colorTheme": "Tokyo Night",
   "window.titleBarStyle": "custom",
 
   //Css  "https://marketplace.visualstudio.com/items?itemName=drcika.apc-extension"
@@ -34,8 +35,10 @@
   "apc.stylesheet": {
     ".pane-body": "padding: 8px, ",
     ".title-label > h2": "display: none",
-    ".editor-actions": "display: none"
+    ".editor-actions": "display: none",
+    ".editor-title": "display: none"
   },
+
   //
 
   //Git
@@ -113,26 +116,36 @@
   //
 
   //Discord Status  "https://marketplace.visualstudio.com/items?itemName=LeonardSSH.vscord"
-  "vscord.status.idle.resetElapsedTime": true,
-  "vscord.status.details.text.idle": "In Clouds☁️",
-  "vscord.status.details.text.viewing": "Coding {problems}",
-  "vscord.status.state.text.editing": "Coding in {file_extension}",
-  "vscord.status.details.text.editing": "In {directory_name}",
-  "vscord.status.image.large.editing.text": "Let's All Love Lain!",
-  "vscord.status.problems.enabled": false,
-  "vscord.status.details.text.notInFile": "👾",
-  "vscord.status.image.large.idle.key": "https://i.imgur.com/ZPtPl7J.gif",
-  "vscord.status.image.small.idle.key": "https://i.imgur.com/Of2YEyI.gif",
-  "vscord.status.image.large.idle.text": "Let's All Love Lain!",
-  "vscord.status.image.small.idle.text": "Love Lain!",
-  "vscord.status.image.large.editing.key": "https://i.imgur.com/UEEru9R.gif",
-  "vscord.status.image.large.notInFile.key": "https://i.imgur.com/F1gOfuV.gif",
+
+  "vscord.status.details.text.viewing": " ",
   "vscord.status.image.large.viewing.text": "Viewing a {lang} file",
+
+  "vscord.status.details.text.idle": "In Clouds☁️",
+  "vscord.status.image.large.idle.key": "https://i.imgur.com/ZPtPl7J.gif",
+  "vscord.status.image.large.idle.text": "Let's All Love Lain!",
+
+  "vscord.status.image.small.idle.key": "https://i.imgur.com/Of2YEyI.gif",
+  "vscord.status.image.small.idle.text": "Love Lain!",
+
+  "vscord.status.image.large.editing.key": "https://i.imgur.com/UEEru9R.gif",
+  "vscord.status.image.large.editing.text": "Let's All Love Lain!",
+  "vscord.status.details.text.editing": " ", //blank to show nothing
+  "vscord.status.state.text.editing": "Coding in {file_extension}",
+  "vscord.status.image.small.editing.key": "https://raw.githubusercontent.com/LeonardSSH/vscord/main/assets/icons/{app_id}.png", //IDE icon, need to change
+  "vscord.status.image.small.editing.text": "Love Lain!",
+
+  "vscord.status.image.large.notInFile.key": "https://i.imgur.com/F1gOfuV.gif",
   "vscord.status.image.large.notInFile.text": "Let's All Love Lain!",
+  "vscord.status.details.text.notInFile": "🐮",
+  "vscord.status.image.small.notInFile.text": "All Reset...",
+
+  "vscord.status.idle.resetElapsedTime": true,
+  "vscord.status.problems.enabled": false,
+
   "vscord.status.buttons.button1.enabled": false,
   "vscord.status.buttons.button1.git.active.enabled": false,
   "vscord.status.buttons.button1.git.idle.enabled": false,
-  "vscord.status.image.small.editing.text": "Love Lain!",
+
   //
 
   "terminal.integrated.profiles.windows": {
@@ -156,5 +169,29 @@
       "args": ["-d", "Arch"]
     }
   },
-  "terminal.integrated.defaultProfile.windows": "Arch (WSL)"
+  "terminal.integrated.defaultProfile.windows": "Arch (WSL)",
+  "window.titleSeparator": " / ",
+  "window.title": "${dirty} Love Lain!",
+  "workbench.colorTheme": "Solarized Osaka"
 }
+
+/*
+${activeEditorShort}: the file name (e.g. myFile.txt).
+${activeEditorMedium}: the path of the file relative to the workspace folder (e.g. myFolder/myFileFolder/myFile.txt).
+${activeEditorLong}: the full path of the file (e.g. /Users/Development/myFolder/myFileFolder/myFile.txt).
+${activeFolderShort}: the name of the folder the file is contained in (e.g. myFileFolder).
+${activeFolderMedium}: the path of the folder the file is contained in, relative to the workspace folder (e.g. myFolder/myFileFolder).
+${activeFolderLong}: the full path of the folder the file is contained in (e.g. /Users/Development/myFolder/myFileFolder).
+${folderName}: name of the workspace folder the file is contained in (e.g. myFolder).
+${folderPath}: file path of the workspace folder the file is contained in (e.g. /Users/Development/myFolder).
+${rootName}: name of the workspace with optional remote name and workspace indicator if applicable (e.g. myFolder, myRemoteFolder [SSH] or myWorkspace (Workspace)).
+${rootNameShort}: shortened name of the workspace without suffixes (e.g. myFolder, myRemoteFolder or myWorkspace).
+${rootPath}: file path of the opened workspace or folder (e.g. /Users/Development/myWorkspace).
+${profileName}: name of the profile in which the workspace is opened (e.g. Data Science (Profile)). Ignored if default profile is used.
+${appName}: e.g. VS Code.
+${remoteName}: e.g. SSH
+${dirty}: an indicator for when the active editor has unsaved changes.
+${focusedView}: the name of the view that is currently focused.
+${separator}: a conditional separator (" - ") that only shows when surrounded by variables with values or static text.
+${dirty}${separator}${rootName}${separator}${profileName}${separator}Love Lain!
+*/
