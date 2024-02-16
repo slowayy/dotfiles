@@ -1,46 +1,53 @@
 {
   //Vscode Config
-  "editor.fontFamily": "JetBrainsMono Nerd Font",
-  "editor.fontSize": 15,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "editor.semanticHighlighting.enabled": false,
-  "editor.minimap.enabled": false,
-  "editor.scrollbar.horizontal": "hidden",
-  "editor.scrollbar.vertical": "hidden",
-  "editor.cursorStyle": "block",
-  "editor.accessibilitySupport": "off",
+  "editor.fontFamily": "JetBrainsMono Nerd Font", //My Font, need to download
+  "editor.fontSize": 15, // Font Size, Default = 12
+  "editor.defaultFormatter": "esbenp.prettier-vscode", //formatter
+  "editor.formatOnSave": true, //Pretteier gon format the code on every save
+  "editor.semanticHighlighting.enabled": false, //highlighting
+  "editor.minimap.enabled": false, //minimap for all text
+  "editor.scrollbar.horizontal": "hidden", //scrollbar on bottom
+  "editor.scrollbar.vertical": "hidden", //scrollbar on right
+  "editor.cursorStyle": "block", // "line" = default
+  "editor.accessibilitySupport": "off", // ik!
+  "editor.acceptSuggestionOnEnter": "smart", // accept suggestions ONLY on <ENTER>
+  "settingsSync.keybindingsPerPlatform": false, //keybinds sync for every platform, linux == windows
 
-  "extensions.autoUpdate": true,
-  "extensions.ignoreRecommendations": true,
+  "extensions.autoUpdate": true, //autoUpdate
+  "extensions.ignoreRecommendations": true, //ignore ext recommendations
 
-  "symbols.hidesExplorerArrows": false,
-  "window.commandCenter": false,
-  "window.density.editorTabHeight": "compact",
+  "symbols.hidesExplorerArrows": false, //arrows on folders
+  "window.commandCenter": false, //command center, use <CTRL><SHIFT> P instead
+  "window.density.editorTabHeight": "compact", //topbar sizing
 
   //
 
   //Visual Config
-  "workbench.iconTheme": "symbols",
-  "workbench.editor.labelFormat": "short",
-  "workbench.activityBar.location": "hidden",
-  "workbench.layoutControl.enabled": false,
-  "workbench.colorTheme": "Tokyo Night",
-  "window.titleBarStyle": "custom",
+  "workbench.iconTheme": "symbols", // icons
+  "workbench.editor.labelFormat": "short", //path on filename
+  "workbench.activityBar.location": "hidden", //source control, explorer, etc. Use <CTRL> Q to use
+  "workbench.layoutControl.enabled": false, //top-right buttons
+  "window.titleBarStyle": "custom", //titlebar style, if on mac, "native" can be better
+  "breadcrumbs.enabled": false, //path from archive
+  "window.titleSeparator": " / ", //separator from ${separator}, but is inactive
+  "window.title": "${dirty} Love Lain!", //app title, ${dirty} = if saved or no
+  "workbench.colorTheme": "Solarized Osaka", //theme
 
   //Css  "https://marketplace.visualstudio.com/items?itemName=drcika.apc-extension"
-  "apc.font.family": "JetBrainsMono Nerd Font",
+  "apc.font.family": "JetBrainsMono Nerd Font", //font
   "apc.listRow": { "height": 24 },
   "apc.stylesheet": {
     ".pane-body": "padding: 8px, ",
-    ".title-label > h2": "display: none",
-    ".editor-actions": "display: none"
+    ".editor-actions": "display: none",
+    ".editor-title": "display: none"
   },
+
   //
 
   //Git
   "git.confirmSync": false,
   "git.autofetch": true,
+
   //
 
   "terminal.sourceControlRepositoriesKind": "both",
@@ -50,25 +57,27 @@
 
   "explorer.compactFolders": false,
 
-  "breadcrumbs.enabled": false,
-
   "emmet.preferences": {},
 
   //CodeRunner  "https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner"
   "code-runner.executorMap": {
     "javascript": "node",
-    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
     "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "zig": "zig run",
     "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "php": "php",
     "python": "python -u",
-    "perl": "perl",
-    "perl6": "perl6",
     "ruby": "ruby",
+    "lua": "lua54"
+    /*
+    "perl6": "perl6",
+    
+   
+   
+   "zig": "zig run",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
     "go": "go run",
-    "lua": "lua54",
+    "perl": "perl",
+    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "php": "php",   
     "groovy": "groovy",
     "powershell": "powershell -ExecutionPolicy ByPass -File",
     "bat": "cmd /c",
@@ -99,7 +108,7 @@
     "nim": "nim compile --verbosity:0 --hints:off --run",
     "lisp": "sbcl --script",
     "kit": "kitc --run",
-    "v": "v run",
+    "v": "v run", 
     "sass": "sass --style expanded",
     "scss": "scss --style expanded",
     "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
@@ -109,32 +118,50 @@
     "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "sml": "cd $dir && sml $fileName",
     "mojo": "mojo run"
+    */
   },
   //
 
   //Discord Status  "https://marketplace.visualstudio.com/items?itemName=LeonardSSH.vscord"
-  "vscord.status.idle.resetElapsedTime": true,
-  "vscord.status.details.text.idle": "In Clouds☁️",
-  "vscord.status.details.text.viewing": "Coding {problems}",
-  "vscord.status.state.text.editing": "Coding in {file_extension}",
-  "vscord.status.details.text.editing": "In {directory_name}",
-  "vscord.status.image.large.editing.text": "Let's All Love Lain!",
-  "vscord.status.problems.enabled": false,
-  "vscord.status.details.text.notInFile": "👾",
-  "vscord.status.image.large.idle.key": "https://i.imgur.com/ZPtPl7J.gif",
-  "vscord.status.image.small.idle.key": "https://i.imgur.com/Of2YEyI.gif",
-  "vscord.status.image.large.idle.text": "Let's All Love Lain!",
-  "vscord.status.image.small.idle.text": "Love Lain!",
-  "vscord.status.image.large.editing.key": "https://i.imgur.com/UEEru9R.gif",
-  "vscord.status.image.large.notInFile.key": "https://i.imgur.com/F1gOfuV.gif",
+
+  //viewing a file
+  "vscord.status.details.text.viewing": " ",
   "vscord.status.image.large.viewing.text": "Viewing a {lang} file",
+
+  //afk settings, afk = 5min or more without touching in vscode
+  "vscord.status.details.text.idle": "In Clouds☁️",
+  "vscord.status.image.large.idle.key": "https://i.imgur.com/ZPtPl7J.gif",
+  "vscord.status.image.large.idle.text": "Let's All Love Lain!",
+
+  "vscord.status.image.small.idle.key": "https://i.imgur.com/Of2YEyI.gif",
+  "vscord.status.image.small.idle.text": "Love Lain!",
+
+  //editting files, every config for this ext is on order, first img, second text... just read
+  "vscord.status.image.large.editing.key": "https://i.imgur.com/UEEru9R.gif",
+  "vscord.status.image.large.editing.text": "Let's All Love Lain!",
+  "vscord.status.details.text.editing": " ", //blank to show nothing
+  "vscord.status.state.text.editing": "Coding in {file_extension}",
+  "vscord.status.image.small.editing.key": "https://raw.githubusercontent.com/LeonardSSH/vscord/main/assets/icons/{app_id}.png", //IDE icon, need to change
+  "vscord.status.image.small.editing.text": "Love Lain!",
+
+  //Not in file, like extensions
+  "vscord.status.image.large.notInFile.key": "https://i.imgur.com/F1gOfuV.gif",
   "vscord.status.image.large.notInFile.text": "Let's All Love Lain!",
+  "vscord.status.details.text.notInFile": "🐮",
+  "vscord.status.image.small.notInFile.text": "All Reset...",
+
+  //to not reset the timer
+  "vscord.status.idle.resetElapsedTime": true,
+  "vscord.status.problems.enabled": false,
+
+  //disable the buttons for git repo
   "vscord.status.buttons.button1.enabled": false,
   "vscord.status.buttons.button1.git.active.enabled": false,
   "vscord.status.buttons.button1.git.idle.enabled": false,
-  "vscord.status.image.small.editing.text": "Love Lain!",
+
   //
 
+  //my terminal settings
   "terminal.integrated.profiles.windows": {
     "PowerShell": {
       "source": "PowerShell",
@@ -158,3 +185,25 @@
   },
   "terminal.integrated.defaultProfile.windows": "Arch (WSL)"
 }
+
+//settings for "window.title"
+/*
+${activeEditorShort}: the file name (e.g. myFile.txt).
+${activeEditorMedium}: the path of the file relative to the workspace folder (e.g. myFolder/myFileFolder/myFile.txt).
+${activeEditorLong}: the full path of the file (e.g. /Users/Development/myFolder/myFileFolder/myFile.txt).
+${activeFolderShort}: the name of the folder the file is contained in (e.g. myFileFolder).
+${activeFolderMedium}: the path of the folder the file is contained in, relative to the workspace folder (e.g. myFolder/myFileFolder).
+${activeFolderLong}: the full path of the folder the file is contained in (e.g. /Users/Development/myFolder/myFileFolder).
+${folderName}: name of the workspace folder the file is contained in (e.g. myFolder).
+${folderPath}: file path of the workspace folder the file is contained in (e.g. /Users/Development/myFolder).
+${rootName}: name of the workspace with optional remote name and workspace indicator if applicable (e.g. myFolder, myRemoteFolder [SSH] or myWorkspace (Workspace)).
+${rootNameShort}: shortened name of the workspace without suffixes (e.g. myFolder, myRemoteFolder or myWorkspace).
+${rootPath}: file path of the opened workspace or folder (e.g. /Users/Development/myWorkspace).
+${profileName}: name of the profile in which the workspace is opened (e.g. Data Science (Profile)). Ignored if default profile is used.
+${appName}: e.g. VS Code.
+${remoteName}: e.g. SSH
+${dirty}: an indicator for when the active editor has unsaved changes.
+${focusedView}: the name of the view that is currently focused.
+${separator}: a conditional separator (" - ") that only shows when surrounded by variables with values or static text.
+${dirty}${separator}${rootName}${separator}${profileName}${separator}Love Lain!
+*/
