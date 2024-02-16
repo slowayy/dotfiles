@@ -1,70 +1,42 @@
 {
   //Vscode Config
-<<<<<<< HEAD
-  "editor.fontFamily": "JetBrainsMono Nerd Font", //My Font, need to download
-  "editor.fontSize": 15, // Font Size, Default = 12
-  "editor.defaultFormatter": "esbenp.prettier-vscode", //formatter
-  "editor.formatOnSave": true, //Pretteier gon format the code on every save
-  "editor.semanticHighlighting.enabled": false, //highlighting
-  "editor.minimap.enabled": false, //minimap for all text
-  "editor.scrollbar.horizontal": "hidden", //scrollbar on bottom
-  "editor.scrollbar.vertical": "hidden", //scrollbar on right
-  "editor.cursorStyle": "block", // "line" = default
-  "editor.accessibilitySupport": "off", // ik!
-  "editor.acceptSuggestionOnEnter": "smart", // accept suggestions ONLY on <ENTER>
-  "settingsSync.keybindingsPerPlatform": false, //keybinds sync for every platform, linux == windows
-=======
-  "editor.fontFamily": "JetBrainsMono Nerd Font",
-  "editor.fontSize": 15,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "editor.semanticHighlighting.enabled": false,
-  "editor.minimap.enabled": false,
-  "editor.scrollbar.horizontal": "hidden",
-  "editor.scrollbar.vertical": "hidden",
-  "editor.cursorStyle": "block",
-  "editor.accessibilitySupport": "off",
-  "editor.acceptSuggestionOnEnter": "smart",
-  "settingsSync.keybindingsPerPlatform": false,
->>>>>>> eca44aa909f8b7a5e3cdc2954522108826aefc5c
-
+  "editor.fontFamily": "JetBrainsMono Nerd Font", //My Font, need to download,
+  "editor.fontSize": 15, // Font Size, Default = 12,
+  "editor.defaultFormatter": "esbenp.prettier-vscode", //formatter,
+  "editor.formatOnSave": true, //Pretteier gon format the code on every save,
+  "editor.semanticHighlighting.enabled": false, //highlighting,
+  "editor.minimap.enabled": false, //minimap for all text,
+  "editor.scrollbar.horizontal": "hidden", //scrollbar on bottom,
+  "editor.scrollbar.vertical": "hidden", //scrollbar on right,
+  "editor.cursorStyle": "block", // "line" = default,
+  "editor.accessibilitySupport": "off", // yk!,
+  "editor.acceptSuggestionOnEnter": "smart", // accept suggestions ONLY on <ENTER>,
+  "settingsSync.keybindingsPerPlatform": false, //keybinds sync for every platform, linux == windows,
   "extensions.autoUpdate": true, //autoUpdate
-  "extensions.ignoreRecommendations": true, //ignore ext recommendations
+  "extensions.ignoreRecommendations": true, //ignore ext recommendations,
 
-  "symbols.hidesExplorerArrows": false, //arrows on folders
-  "window.commandCenter": false, //command center, use <CTRL><SHIFT> P instead
-  "window.density.editorTabHeight": "compact", //topbar sizing
+  "symbols.hidesExplorerArrows": false, //arrows on folders,
+  "window.commandCenter": false, //command center, use <CTRL><SHIFT> P instead,
+  "window.density.editorTabHeight": "compact", //topbar sizing,
 
   //
 
   //Visual Config
-<<<<<<< HEAD
-  "workbench.iconTheme": "symbols", // icons
-  "workbench.editor.labelFormat": "short", //path on filename
-  "workbench.activityBar.location": "hidden", //source control, explorer, etc. Use <CTRL> Q to use
-  "workbench.layoutControl.enabled": false, //top-right buttons
-  "window.titleBarStyle": "custom", //titlebar style, if on mac, "native" can be better
-  "breadcrumbs.enabled": false, //path from archive
-  "window.titleSeparator": " / ", //separator from ${separator}, but is inactive
-  "window.title": "${dirty} Love Lain!", //app title, ${dirty} = if saved or no
-  "workbench.colorTheme": "Solarized Osaka", //theme
-=======
-  "workbench.iconTheme": "symbols",
-  "workbench.editor.labelFormat": "short",
-  "workbench.activityBar.location": "hidden",
-  "workbench.layoutControl.enabled": false,
-  "window.titleBarStyle": "custom",
->>>>>>> eca44aa909f8b7a5e3cdc2954522108826aefc5c
+  "workbench.iconTheme": "symbols", // icons,
+  "workbench.editor.labelFormat": "short", //path on filename,
+  "workbench.activityBar.location": "hidden", //source control, explorer, etc. Use <CTRL> Q to use,
+  "workbench.layoutControl.enabled": false, //top-right buttons,
+  "window.titleBarStyle": "custom", //titlebar style, if on mac, "native" can be better,
+  "breadcrumbs.enabled": false, //path from archive,
+  "window.titleSeparator": " / ", //separator from ${separator}, but is inactive,
+  "window.title": "${dirty} Love Lain!", //app title, ${dirty} = if saved or no,
+  "workbench.colorTheme": "Solarized Osaka", //theme,
 
-  //Css  "https://marketplace.visualstudio.com/items?itemName=drcika.apc-extension"
-  "apc.font.family": "JetBrainsMono Nerd Font", //font
+  //Css  "https://marketplace.visualstudio.com/items?itemName=drcika.apc-extension",
+  "apc.font.family": "JetBrainsMono Nerd Font", //font,
   "apc.listRow": { "height": 24 },
   "apc.stylesheet": {
     ".pane-body": "padding: 8px, ",
-<<<<<<< HEAD
-=======
-    ".title-label > h2": "display: none",
->>>>>>> eca44aa909f8b7a5e3cdc2954522108826aefc5c
     ".editor-actions": "display: none",
     ".editor-title": "display: none"
   },
@@ -86,7 +58,7 @@
 
   "emmet.preferences": {},
 
-  //CodeRunner  "https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner"
+  //CodeRunner  "https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner",
   "code-runner.executorMap": {
     "javascript": "node",
     "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
@@ -149,19 +121,13 @@
   },
   //
 
-  //Discord Status  "https://marketplace.visualstudio.com/items?itemName=LeonardSSH.vscord"
+  //Discord Status  "https://marketplace.visualstudio.com/items?itemName=LeonardSSH.vscord",
 
-<<<<<<< HEAD
-  //viewing a file
+  //viewing a file,
   "vscord.status.details.text.viewing": " ",
   "vscord.status.image.large.viewing.text": "Viewing a {lang} file",
 
-  //afk settings, afk = 5min or more without touching in vscode
-=======
-  "vscord.status.details.text.viewing": " ",
-  "vscord.status.image.large.viewing.text": "Viewing a {lang} file",
-
->>>>>>> eca44aa909f8b7a5e3cdc2954522108826aefc5c
+  //afk settings, afk = 5min or more without touching in vscode,
   "vscord.status.details.text.idle": "In Clouds☁️",
   "vscord.status.image.large.idle.key": "https://i.imgur.com/ZPtPl7J.gif",
   "vscord.status.image.large.idle.text": "Let's All Love Lain!",
@@ -169,44 +135,32 @@
   "vscord.status.image.small.idle.key": "https://i.imgur.com/Of2YEyI.gif",
   "vscord.status.image.small.idle.text": "Love Lain!",
 
-<<<<<<< HEAD
-  //editting files, every config for this ext is on order, first img, second text... just read
-=======
->>>>>>> eca44aa909f8b7a5e3cdc2954522108826aefc5c
+  //editting files, every config for this ext is on order, first img, second text... just read,
   "vscord.status.image.large.editing.key": "https://i.imgur.com/UEEru9R.gif",
   "vscord.status.image.large.editing.text": "Let's All Love Lain!",
   "vscord.status.details.text.editing": " ", //blank to show nothing
   "vscord.status.state.text.editing": "Coding in {file_extension}",
-  "vscord.status.image.small.editing.key": "https://raw.githubusercontent.com/LeonardSSH/vscord/main/assets/icons/{app_id}.png", //IDE icon, need to change
+  "vscord.status.image.small.editing.key": "https://raw.githubusercontent.com/LeonardSSH/vscord/main/assets/icons/{app_id}.png", //IDE icon, need to change,
   "vscord.status.image.small.editing.text": "Love Lain!",
 
-<<<<<<< HEAD
-  //Not in file, like extensions
-=======
->>>>>>> eca44aa909f8b7a5e3cdc2954522108826aefc5c
+  //Not in file, like extensions,
   "vscord.status.image.large.notInFile.key": "https://i.imgur.com/F1gOfuV.gif",
   "vscord.status.image.large.notInFile.text": "Let's All Love Lain!",
   "vscord.status.details.text.notInFile": "🐮",
   "vscord.status.image.small.notInFile.text": "All Reset...",
 
-<<<<<<< HEAD
-  //to not reset the timer
+  //to not reset the timer,
   "vscord.status.idle.resetElapsedTime": true,
   "vscord.status.problems.enabled": false,
 
-  //disable the buttons for git repo
-=======
-  "vscord.status.idle.resetElapsedTime": true,
-  "vscord.status.problems.enabled": false,
-
->>>>>>> eca44aa909f8b7a5e3cdc2954522108826aefc5c
+  //disable the buttons for git repo,
   "vscord.status.buttons.button1.enabled": false,
   "vscord.status.buttons.button1.git.active.enabled": false,
   "vscord.status.buttons.button1.git.idle.enabled": false,
 
   //
 
-  //my terminal settings
+  //my terminal settings,
   "terminal.integrated.profiles.windows": {
     "PowerShell": {
       "source": "PowerShell",
@@ -228,16 +182,10 @@
       "args": ["-d", "Arch"]
     }
   },
-  "terminal.integrated.defaultProfile.windows": "Arch (WSL)",
-  "window.titleSeparator": " / ",
-  "window.title": "${dirty} Love Lain!",
-  "workbench.colorTheme": "Solarized Osaka"
+  "terminal.integrated.defaultProfile.windows": "Arch (WSL)"
 }
 
-<<<<<<< HEAD
-//settings for "window.title"
-=======
->>>>>>> eca44aa909f8b7a5e3cdc2954522108826aefc5c
+//settings for "window.title",
 /*
 ${activeEditorShort}: the file name (e.g. myFile.txt).
 ${activeEditorMedium}: the path of the file relative to the workspace folder (e.g. myFolder/myFileFolder/myFile.txt).
