@@ -19,7 +19,7 @@
   "symbols.hidesExplorerArrows": false, //arrows on folders
   "window.commandCenter": false, //command center, use <CTRL><SHIFT> P instead
   "window.density.editorTabHeight": "compact", //topbar sizing
-
+  "window.menuBarVisibility": "toggle",
   //
 
   //Visual Config
@@ -158,7 +158,7 @@
   "vscord.status.buttons.button1.enabled": false,
   "vscord.status.buttons.button1.git.active.enabled": false,
   "vscord.status.buttons.button1.git.idle.enabled": false,
-
+  "vscord.app.name": "Code",
   //
 
   //my terminal settings
@@ -183,7 +183,8 @@
       "args": ["-d", "Arch"]
     }
   },
-  "terminal.integrated.defaultProfile.windows": "Arch (WSL)"
+  "terminal.integrated.defaultProfile.windows": "Arch (WSL)",
+  "liveServer.settings.CustomBrowser": "firefox"
 }
 
 //settings for "window.title"
