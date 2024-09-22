@@ -1,18 +1,9 @@
-# My dotfiles for VScode, and Nvim.
+# 
 
-# Vscode
 
-![vscode](vscode.png)
-![vscode2](vscode2.png)
-Vscode is modified with APC and more, extensions who i used on .json.
 
-To use the side bar use "Ctrl Q" to move each other option
 
-# Nvim
 
-![nvim](nvim.png)
+sudo pacman -S zsh grim slurp wofi fastfetch kitty eza neovim discord github-cli lazygit nautilus spotify-launcher pipewire pavucontrol nwg-look btop waybar php go rust lua wireplumber swwww xdg-desktop-portal-hyprland polkit-kde-agent
 
-Nvim basicly is lazyvim with some plugins, no more, VScode is more modified because is more simple then nvim to configure, or made changes.
-
-![nvim2](nvim2.png)
-Theme solarized osaka
+yay -S oh-my-posh visual-studio-code-bin hyprpicker pokemon-color-scripts-git

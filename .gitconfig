@@ -1,0 +1,17 @@
+[user]
+	email = gabrielqalcantara@gmail.com
+	name = Gabriel Alcântara
+	username = slowayy
+	signingkey = /home/slowayy/.ssh/id_ed25519.pub
+[web]
+	browser = firefox
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true

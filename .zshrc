@@ -15,17 +15,26 @@ compinit
 export PATH=$PATH:/home/slowayy_/.local/bin
 eval "$(oh-my-posh init zsh)"
 
-eval "$(oh-my-posh init zsh --config ~/.config/zsh.omp.json)"
+eval "$(oh-my-posh init zsh --config https://raw.githubusercontent.com/slowayy/dotfiles/refs/heads/main/.config/zsh.omp.toml)"
 
 
 
 # alias
 
 alias dev='cd ~/coding/'
-
-alias update='sudo dnf update'
-
-alias autr='sudo dnf autoremove'
-alias slw='neofetch'
-
+alias pac='sudo pacman -S'
+alias pacr='sudo pacman -R'
+alias pacu='sudo pacman -Syu'
+alias yayi='yay -S'
+alias yayr='yay -R'
 alias ls='eza --icons --color=always --group-directories-first'
+export PATH=$PATH:/home/slowayy/.spicetify
+
+# bun completions
+[ -s "/home/slowayy/.bun/_bun" ] && source "/home/slowayy/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+#RUN POKEMON-COLORSCRIPTS ON LAUNCH RANDOM
+pokemon-colorscripts -r --no-title
