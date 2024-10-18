@@ -1,14 +1,18 @@
 local g = vim.g       -- Global variables
+local o = vim.o
 local opt = vim.opt   -- Set options (global/buffer/windows-scoped)
+local cmd = vim.cmd
+g.mapleader = ' '
+g.maplocalleader = ' '
 
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+
 -- UI
-vim.o.background = "light"
-vim.cmd([[colorscheme gruvbox]])
+o.background = "light"
+-- vim.cmd([[colorscheme gruvbox]])
 
 
- -- Neovim OPTS 
+ g.base46_cache = vim.fn.stdpath "data" .. "/base46_cache/"
+-- Neovim OPTS 
 opt.autoread = true
 opt.number = true
 opt.relativenumber = false
@@ -21,10 +25,16 @@ opt.wrap = true
 opt.undofile = true
 opt.lazyredraw = false
 
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
+g.loaded_node_provider = 0
+g.loaded_python3_provider = 0
+g.loaded_perl_provider = 0
+g.loaded_ruby_provider = 0
+
+
+cmd("set expandtab")
+cmd("set tabstop=2")
+cmd("set softtabstop=2")
+cmd("set shiftwidth=2")
 
 
 
@@ -66,3 +76,14 @@ local disabled_built_ins = {
 for _, plugin in pairs(disabled_built_ins) do
    g["loaded_" .. plugin] = 1
 end
+
+
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    -- delay update diagnostics
+    update_in_insert = true,
+  }
+)
+
+
+
