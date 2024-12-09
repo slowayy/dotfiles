@@ -1,4 +1,0 @@
-
-# Created by `pipx` on 2024-10-03 02:22:16
-export PATH="$PATH:/home/slowayy/.local/bin"
-pokemon-colorscripts -r --no-title
