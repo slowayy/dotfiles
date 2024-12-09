@@ -26,6 +26,6 @@ bold_italic_font auto
 
 
 # BEGIN_KITTY_THEME
-# Gruvbox Material Dark Medium
+# Github
 include current-theme.conf
 # END_KITTY_THEME
