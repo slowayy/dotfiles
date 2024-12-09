@@ -1,3 +1,17 @@
+#alias
+alias dev='cd ~/coding/'
+alias pac='sudo pacman -S'
+alias yayi='yay -S'
+alias yayr='yay -R'
+alias pacr='sudo pacman -R'
+alias update='sudo pacman -Syu && yay'
+
+##utils
+alias ls='eza --icons --color=always --group-directories-first'
+alias cat='bat'
+alias cd='z'
+
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=200
@@ -20,8 +34,7 @@ eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
 eval "$(fzf --zsh)"
 
-source ~/.config/zsh/alias
-
+source ~/.config/zsh/.zlogin
 # bun completions
 [ -s "/home/slowayy/.bun/_bun" ] && source "/home/slowayy/.bun/_bun"
 
@@ -29,7 +42,6 @@ source ~/.config/zsh/alias
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 #RUN POKEMON-COLORSCRIPTS ON LAUNCH RANDOM
-pokemon-colorscripts -r --no-title
 
 # Created by `pipx` on 2024-10-03 02:22:16
 export PATH="$PATH:/home/slowayy/.local/bin"
