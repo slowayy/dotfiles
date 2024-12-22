@@ -1,88 +1,121 @@
 // "network", "temperature",
 {
   "position": "top",
-  "layer": "top",
+    "layer": "bottom",
+  "exclusive": true,
+  "passtrough": false,
+  "mode": "dock",
+  "reload_style_on_change": true,
+
+  
+  "height":36,
   "margin-top": 0,
   "margin-left": 0,
   "margin-right": 0,
-  "height": 35,
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["hyprland/window"],
-  "modules-right": ["cpu", "memory", "pulseaudio", "battery", "clock"],
+  
+  "modules-left": ["custom/icon", "hyprland/window", "cava"],
+  "modules-center": ["custom/spotify"],
+  "modules-right": ["privacy", "tray", "pulseaudio/slider", "battery", "clock"],
+  
+  "custom/icon": {
+    "format": "{icon}",
+    "format-icons": ["  "],
+  },
+  
   "hyprland/window": {
     "format": "{}",
     "icon": true,
-    "max-length": 35,
+    "max-length": 13,
     "rewrite": {
-      "": "Hyprland"
+      "": "Hyprland",
+      
     },
-    "separate-outputs": false
   },
-  "hyprland/workspaces": {
-    "format": "{icon}",
-    "on-click": "activate",
-    "format-icons": {
-      "active": " "
+
+ "custom/spotify": {
+    "exec": "/usr/bin/python3 ~/.config/hypr/scripts/mediaplayer.py --player spotify",
+    "format": "{} ",
+    "return-type": "json",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+},
+
+  "cava": {
+//        "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+        "framerate": 60,
+        "autosens": 0,
+        "sensitivity": 100,
+        "bars": 14,
+        "lower_cutoff_freq": 50,
+        "higher_cutoff_freq": 10000,
+        "method": "pipewire",
+        "source": "auto",
+        "stereo": true,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": false,
+        "waves": true,
+        "sleep_timer": 5,
+        "noise_reduction": 0.46,
+        "input_delay": 2,
+        "hide_on_silence": true,
+        "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+        "actions": {
+                   "on-click-right": "mode"
+                   }
     },
-    "sort-by-number": true,
-    "persistent-workspaces": {
-      "*": 4, // 5 workspaces by default on every monitor
-      "HDMI-A-1": 3 // but only three on HDMI-A-1
-    }
+  
+
+  "tray": {
+	  "icon-size": 31,
+	  "spacing": 10
   },
-  "clock": {
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}"
+  
+  "pulseaudio/slider": {
+      "min": 0,
+      "max": 100,
+      "orientation": "horizontal"
   },
-  "cpu": {
-    "interval": 10,
-    "format": "{}% ",
-    "max-length": 10
-  },
-  "memory": {
-    "interval": 30,
-    "format": "{}% ",
-    "max-length": 10
-  },
-  "temperature": {
-    "critical-threshold": 80,
-    "format": "{icon} {temperatureC}°C",
-    "format-icons": ["", "", ""]
-  },
+   
+  
   "battery": {
     "states": {
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon}  {capacity}%",
-    "format-full": "{icon}  {capacity}%",
+    "format": "{icon}",
+    "format-full": "{capacity}% {icon}",
     "format-charging": "  {capacity}%",
-    "format-plugged": "  {capacity}%",
-    "format-alt": "{time} {icon}",
-    "format-icons": ["", "", "", "", ""]
+    "format-plugged": " {capacity}%",
+    "format-alt": "{capacity}% {icon}",
+    "format-icons": ["  ", "  ", "  ", "  ", "  ", "  "]
   },
-  "network": {
-    "format-wifi": "  {signalStrength}%",
-    "format-ethernet": "{cidr} ",
-    "tooltip-format": "{ifname} via {gwaddr} ",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": " ⚠ ",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  
+  "clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}"
   },
-  "pulseaudio": {
-    "format": "{icon}  {volume}%",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " {format_source}",
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": ["", "", ""]
-    },
-    "on-click": "pavucontrol"
-  }
+ "privacy": {
+	"icon-spacing": 4,
+	"icon-size": 18,
+	"transition-duration": 250,
+	"modules": [
+		{
+			"type": "screenshare",
+			"tooltip": true,
+			"tooltip-icon-size": 24
+		},
+		{
+			"type": "audio-out",
+			"tooltip": true,
+			"tooltip-icon-size": 24
+		},
+		{
+			"type": "audio-in",
+			"tooltip": true,
+			"tooltip-icon-size": 24
+		}
+	]
+},
 }

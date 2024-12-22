@@ -1,16 +1,17 @@
 @import "macchiato.css";
 
 * {
-  font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-family: "Fira Code Retina";
+  font-size: 24px;
 }
 
 window#waybar {
-  background-color: @base;
+  background-color:  #adadad ;
   border-radius: 0px;
   transition-property: background-color;
   transition-duration: 0.5s;
 }
+
 
 button {
   /* Use box-shadow instead of border so the text isn't offset */
@@ -65,39 +66,31 @@ button:hover {
   padding: 0 10px;
 }
 #memory {
-  color: @wine;
+  color: @crust;
 }
 #cpu {
-  color: @bege;
+  color: @crust;
 }
 #pulseaudio {
-  color: @maroon;
+  color: @crust;
 }
 
-#network {
-  color: @yellow;
-}
-
-#temperature {
-  color: @sky;
-}
 
 #battery {
-  color: @green;
+  color: @crust;
 }
 
 #clock {
-  color: @flamingo;
+  color: @crust;
 }
 
 #window {
-  color: @text;
+  color: @crust;
 }
 
 .modules-right,
-.modules-left,
-.modules-center {
-  background-color: @base;
+.modules-left{
+  /* background-color: @transparent; */
   border-radius: 15px;
 }
 .modules-right {
@@ -105,15 +98,17 @@ button:hover {
 }
 
 .modules-left {
-  padding: 0 20px;
-}
-
-.modules-center {
   padding: 0 10px;
 }
+
+#custom-icon{
+  padding-left: 10px;
+  background-color: #fff
+}
+
 #battery.charging,
 #battery.plugged {
-  color: @sapphire;
+  color: @wine;
 }
 
 @keyframes blink {
@@ -139,4 +134,24 @@ label:focus {
 
 #pulseaudio.muted {
   color: @text;
+}
+
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+#pulseaudio-slider trough {
+    min-height: 10px;
+    min-width: 80px;
+    border-radius: 5px;
+    background-color: black;
+}
+#pulseaudio-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background-color: green;
 }
