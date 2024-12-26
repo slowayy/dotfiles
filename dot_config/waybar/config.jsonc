@@ -9,83 +9,136 @@
 
   
   "height":36,
-  "margin-top": 0,
-  "margin-left": 0,
-  "margin-right": 0,
   
-  "modules-left": ["custom/icon", "hyprland/window", "cava"],
+  "modules-left": ["custom/svg", "hyprland/window"],
   "modules-center": ["custom/spotify"],
-  "modules-right": ["privacy", "tray", "pulseaudio/slider", "battery", "clock"],
+  "modules-right": ["group/groupTray", "group/groupResource", "pulseaudio/slider", "battery", "clock"],
   
   "custom/icon": {
     "format": "{icon}",
-    "format-icons": ["  "],
+    "format-icons": [" "],
   },
   
   "hyprland/window": {
-    "format": "{}",
+    "format": "<span  weight='bold' >{class}</span>",
     "icon": true,
+    "icon-size": 25,
     "max-length": 13,
     "rewrite": {
       "": "Hyprland",
       
     },
   },
+ 
+//   "cava": {
+// //        "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+//         "framerate": 60,
+//         "autosens": 0,
+//         "sensitivity": 100,
+//         "bars": 6,
+//         "lower_cutoff_freq": 50,
+//         "higher_cutoff_freq": 10000,
+//         "method": "pipewire",
+//         "source": "auto",
+//         "stereo": true,
+//         "reverse": true,
+//         "bar_delimiter": 0,
+//         "monstercat": false,
+//         "waves": true,
+//         "sleep_timer": 5,
+//         "noise_reduction": 0.46,
+//         "input_delay": 2,
+//         "hide_on_silence": true,
+//         "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+//         "actions": {
+//                    "on-click-right": "mode"
+//                    }
+//     },
+//
+
+ // uwu svg
+ "custom/svg": {
+  "format": "    ",
+  "tooltip": false,
+  },
+
 
  "custom/spotify": {
     "exec": "/usr/bin/python3 ~/.config/hypr/scripts/mediaplayer.py --player spotify",
-    "format": "{} ",
+    "format": " ",
+    "format-alt":" {}",
     "return-type": "json",
-    "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous"
-},
+  },
 
-  "cava": {
-//        "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
-        "framerate": 60,
-        "autosens": 0,
-        "sensitivity": 100,
-        "bars": 14,
-        "lower_cutoff_freq": 50,
-        "higher_cutoff_freq": 10000,
-        "method": "pipewire",
-        "source": "auto",
-        "stereo": true,
-        "reverse": false,
-        "bar_delimiter": 0,
-        "monstercat": false,
-        "waves": true,
-        "sleep_timer": 5,
-        "noise_reduction": 0.46,
-        "input_delay": 2,
-        "hide_on_silence": true,
-        "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
-        "actions": {
-                   "on-click-right": "mode"
-                   }
+
+    "group/groupTray": {
+    "orientation": "inherit",
+        "drawer": {
+        "transition-duration": 500,
+        "children-class": "not-power",
+        "transition-left-to-right": true,
+        "click-to-reveal": true
     },
-  
+    "modules": [
+      "custom/trayAggregator",
+      "tray",
+      "privacy"
+    ]
+  },
+
+
+  "custom/trayAggregator": {
+  "format": "{icon}",
+    "format-icons": "󰀻 ",
+    "tooltip": false,
+
+  },
 
   "tray": {
-	  "icon-size": 31,
+	  "icon-size": 25,
 	  "spacing": 10
   },
+
+    "privacy": {
+	  "icon-spacing": 4,
+	  "icon-size": 25,
+	  "transition-duration": 250,
+	  "modules": [
+		{
+			"type": "screenshare",
+			"tooltip": true,
+			"tooltip-icon-size": 25
+		},
+		{
+			"type": "audio-out",
+			"tooltip": true,
+			"tooltip-icon-size": 25
+		},
+		{
+			"type": "audio-in",
+			"tooltip": true,
+			"tooltip-icon-size": 25
+		}
+	]
+},
   
+
+
   "pulseaudio/slider": {
       "min": 0,
       "max": 100,
-      "orientation": "horizontal"
+      "orientation": "inherit"
   },
    
-  
   "battery": {
     "states": {
       "warning": 30,
       "critical": 15
     },
     "format": "{icon}",
-    "format-full": "{capacity}% {icon}",
+    "format-full": "{icon}",
     "format-charging": "  {capacity}%",
     "format-plugged": " {capacity}%",
     "format-alt": "{capacity}% {icon}",
@@ -96,26 +149,41 @@
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}"
   },
- "privacy": {
-	"icon-spacing": 4,
-	"icon-size": 18,
-	"transition-duration": 250,
-	"modules": [
-		{
-			"type": "screenshare",
-			"tooltip": true,
-			"tooltip-icon-size": 24
-		},
-		{
-			"type": "audio-out",
-			"tooltip": true,
-			"tooltip-icon-size": 24
-		},
-		{
-			"type": "audio-in",
-			"tooltip": true,
-			"tooltip-icon-size": 24
-		}
-	]
+
+
+  "group/groupResource": {
+    "orientation": "inherit",
+    "drawer": {
+        "transition-duration": 500,
+        "transition-left-to-right": true,
+        "click-to-reveal": true,
+    },
+  "modules": [
+      "custom/cpu",
+      "cpu",
+      "memory"
+
+    ]
+  },
+
+
+  "custom/cpu": {
+    "format": "{icon}",
+    "format-icons": " ",
+    "tooltip": false, 
+  },
+ 
+ "cpu": {
+    "interval": 15,
+    "format": "{icon}",
+    "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
+  },
+  
+ "memory": {
+    "interval": 15,
+    "format": "{icon}",
+    "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
+    "max-length": 10
 },
+
 }
