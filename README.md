@@ -17,3 +17,10 @@
 ### Dotfiles managed with "[Chezmoi](https://github.com/twpayne/chezmoi)"
 
 #### Prints made with "[Freeze](https://github.com/charmbracelet/freeze)"
+
+
+
+#### TODO 
+- USWM?
+- Eww
+- 
