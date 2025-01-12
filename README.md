@@ -13,14 +13,17 @@
 
 ![Waybar-2](https://github.com/user-attachments/assets/d9573f67-37ea-4116-bf94-b7fcc6821c7e)
 
+### Showcase SDDM 
+https://github.com/user-attachments/assets/6916499f-4eea-4ded-a2a2-ef514b44a5a9
+
+
 
 ### Dotfiles managed with "[Chezmoi](https://github.com/twpayne/chezmoi)"
 
 #### Prints made with "[Freeze](https://github.com/charmbracelet/freeze)"
 
 
-
 #### TODO 
-- USWM?
-- Eww
+- USWM ✔️
+- Eww ❌
 - 
