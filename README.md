@@ -5,13 +5,11 @@
 ### Wallpaper Manager by "[swww](https://github.com/LGFae/swww)"
 ![image](https://github.com/user-attachments/assets/513d4f7c-983e-4d67-a5d7-539808babf3c)
 
-### Terminal Theme managed with "[Oh My Posh](https://github.com/jandedobbeleer/oh-my-posh)"
-![image](https://github.com/user-attachments/assets/2becf18d-817d-4ede-9965-c92ad53012c5)
+### Terminal Theme managed with "[Starship](https://github.com/starship/starship)"
+![image](https://github.com/user-attachments/assets/8b412616-6615-4b7a-b546-743b1388fe9a)
 
 ### Status bar/Menu Bar by ["Waybar"](https://github.com/Alexays/Waybar)
-![Waybar](https://github.com/user-attachments/assets/956c054e-e2bb-4f66-9517-b0b06e3f1d16)
-
-![Waybar-2](https://github.com/user-attachments/assets/d9573f67-37ea-4116-bf94-b7fcc6821c7e)
+![image](https://github.com/user-attachments/assets/47a77d8d-1f97-4947-8fa3-726bd63118ab)
 
 ### Showcase SDDM 
 https://github.com/user-attachments/assets/6916499f-4eea-4ded-a2a2-ef514b44a5a9
