@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the path to the wallpapers directory
-wallpapersDir="$HOME/.config/wallpapers/"
+wallpapersDir="$HOME/.config/hypr/wallpapers/"
 
 # Get a list of all image files in the wallpapers directory
 wallpapers=("$wallpapersDir"/*)
@@ -21,5 +21,5 @@ while true; do
 	# Update the wallpaper using the swww img command
 	swww img "$selectedWallpaper" --transition-type wave --transition-step 60 --transition-fps 60
 	# Delay before selecting the next wallpaper
-	sleep 6h
+	sleep 2h
 done

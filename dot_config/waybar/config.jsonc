@@ -1,72 +1,53 @@
-// "network", "temperature",
 {
   "position": "top",
     "layer": "bottom",
   "exclusive": true,
   "passtrough": false,
-  "mode": "dock",
+  // "mode": "dock",
   "reload_style_on_change": true,
 
   
-  "height":36,
-  
-  "modules-left": ["custom/svg", "hyprland/window"],
-  "modules-center": ["custom/spotify"],
-  "modules-right": ["group/groupTray", "group/groupResource", "pulseaudio/slider", "battery", "clock"],
+  "height":57,
+  "width":1600, 
+  "modules-left": ["custom/icon", "hyprland/window"],
+  "modules-center": ["custom/spotify", "hyprland/workspaces"],
+  "modules-right": ["group/groupTray", "group/groupResource", "battery", "clock"],
   
   "custom/icon": {
     "format": "{icon}",
-    "format-icons": [" "],
+    "format-icons": ["󰣇 "],
   },
   
   "hyprland/window": {
     "format": "<span  weight='bold' >{class}</span>",
     "icon": true,
-    "icon-size": 25,
+    "icon-size": 30,
     "max-length": 13,
     "rewrite": {
       "": "Hyprland",
       
     },
   },
- 
-//   "cava": {
-// //        "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
-//         "framerate": 60,
-//         "autosens": 0,
-//         "sensitivity": 100,
-//         "bars": 6,
-//         "lower_cutoff_freq": 50,
-//         "higher_cutoff_freq": 10000,
-//         "method": "pipewire",
-//         "source": "auto",
-//         "stereo": true,
-//         "reverse": true,
-//         "bar_delimiter": 0,
-//         "monstercat": false,
-//         "waves": true,
-//         "sleep_timer": 5,
-//         "noise_reduction": 0.46,
-//         "input_delay": 2,
-//         "hide_on_silence": true,
-//         "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
-//         "actions": {
-//                    "on-click-right": "mode"
-//                    }
-//     },
-//
-
- // uwu svg
- "custom/svg": {
-  "format": "    ",
-  "tooltip": false,
-  },
+"hyprland/workspaces": {
+	"format": "{icon}",
+	"format-icons": {
+		"1": "",
+		"2": "",
+		"3": "",
+		"active": "",
+		"default": ""
+	},
+       "persistent-workspaces": {
+             "*": 3, // 5 workspaces by default on every monitor
+             "HDMI-A-1": 3 // but only three on HDMI-A-1
+       }
+},
 
 
  "custom/spotify": {
     "exec": "/usr/bin/python3 ~/.config/hypr/scripts/mediaplayer.py --player spotify",
     "format": " ",
-    "format-alt":" {}",
+    "format-alt":"  {}",
     "return-type": "json",
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous"
@@ -84,14 +65,14 @@
     "modules": [
       "custom/trayAggregator",
       "tray",
-      "privacy"
+      "pulseaudio/slider"
     ]
   },
 
 
   "custom/trayAggregator": {
   "format": "{icon}",
-    "format-icons": "󰀻 ",
+    "format-icons": "󰇘 ",
     "tooltip": false,
 
   },
@@ -100,32 +81,7 @@
 	  "icon-size": 25,
 	  "spacing": 10
   },
-
-    "privacy": {
-	  "icon-spacing": 4,
-	  "icon-size": 25,
-	  "transition-duration": 250,
-	  "modules": [
-		{
-			"type": "screenshare",
-			"tooltip": true,
-			"tooltip-icon-size": 25
-		},
-		{
-			"type": "audio-out",
-			"tooltip": true,
-			"tooltip-icon-size": 25
-		},
-		{
-			"type": "audio-in",
-			"tooltip": true,
-			"tooltip-icon-size": 25
-		}
-	]
-},
   
-
-
   "pulseaudio/slider": {
       "min": 0,
       "max": 100,
@@ -139,51 +95,15 @@
     },
     "format": "{icon}",
     "format-full": "{icon}",
-    "format-charging": "  {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
     "format-plugged": " {capacity}%",
     "format-alt": "{capacity}% {icon}",
-    "format-icons": ["  ", "  ", "  ", "  ", "  ", "  "]
+    "format-icons": ["󰁺 ", "󰁻 ", "󰁼 ", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁","󰂂","󰁹" ]
   },
   
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}"
   },
-
-
-  "group/groupResource": {
-    "orientation": "inherit",
-    "drawer": {
-        "transition-duration": 500,
-        "transition-left-to-right": true,
-        "click-to-reveal": true,
-    },
-  "modules": [
-      "custom/cpu",
-      "cpu",
-      "memory"
-
-    ]
-  },
-
-
-  "custom/cpu": {
-    "format": "{icon}",
-    "format-icons": " ",
-    "tooltip": false, 
-  },
- 
- "cpu": {
-    "interval": 15,
-    "format": "{icon}",
-    "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
-  },
-  
- "memory": {
-    "interval": 15,
-    "format": "{icon}",
-    "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
-    "max-length": 10
-},
 
 }
