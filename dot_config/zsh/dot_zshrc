@@ -7,7 +7,7 @@ alias pacr='sudo pacman -R'
 alias update='sudo pacman -Syu && yay'
 
 ##utils
-alias ls='eza --icons --color=always --group-directories-first'
+alias ls='lla'
 alias cat='bat'
 alias cd='z'
 
@@ -26,32 +26,11 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-export PATH=$PATH:/home/slowayy_/.local/bin
+export PATH=$PATH:~/.local/bin/
 
-eval "$(oh-my-posh init zsh)"
-eval "$(oh-my-posh init zsh --config ~/.config/zsh/zsh.omp.toml)"
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
 eval "$(fzf --zsh)"
+eval "$(starship init zsh)"
 
 source ~/.config/zsh/.zlogin
-# bun completions
-[ -s "/home/slowayy/.bun/_bun" ] && source "/home/slowayy/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-#RUN POKEMON-COLORSCRIPTS ON LAUNCH RANDOM
-
-# Created by `pipx` on 2024-10-03 02:22:16
-export PATH="$PATH:/home/slowayy/.local/bin"
-export PATH="$PATH:/home/slowayy/.cargo/bin"
-#
-
-# BEGIN opam configuration
-# This is useful if you're using opam as it adds:
-#   - the correct directories to the PATH
-#   - auto-completion for the opam binary
-# This section can be safely removed at any time if needed.
-[[ ! -r '/home/slowayy/.opam/opam-init/init.zsh' ]] || source '/home/slowayy/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
-# END opam configuration
