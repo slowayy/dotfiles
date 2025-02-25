@@ -1,5 +1,5 @@
 ### Arch Linux Distro
-### Tiling Window Manager by "[Hyprland](https://github.com/hyprwm/Hyprland)" in Wayland
+###  Dynamic Tiling Wayland compositor by "[Hyprland](https://github.com/hyprwm/Hyprland)" in Wayland
 ![image](https://github.com/user-attachments/assets/c076979f-fb2b-4540-9022-87fde63c6f64)
 
 ### Wallpaper Manager by "[swww](https://github.com/LGFae/swww)"
