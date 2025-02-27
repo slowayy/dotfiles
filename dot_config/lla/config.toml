@@ -87,7 +87,7 @@ case_sensitive = false
 
 # Hide dot files and directories by default
 # Default: false
-no_dotfiles = true
+no_dotfiles = false
 
 # Formatter-specific configurations
 [formatters.tree]
