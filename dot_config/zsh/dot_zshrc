@@ -1,16 +1,16 @@
 #alias
 alias dev='cd ~/coding/'
 alias pac='sudo pacman -S'
+alias pacr='sudo pacman -R'
 alias yayi='yay -S'
 alias yayr='yay -R'
-alias pacr='sudo pacman -R'
 alias update='sudo pacman -Syu && yay'
 
+alias mvim='NVIM_APPNAME=mynvim nvim'
+ 
 ##utils
 alias ls='lla --no-dotfiles '
 alias 'lsa'='lla'
-
-
 alias cat='bat'
 alias cd='z'
 
